@@ -1,280 +1,272 @@
 echo > .nojekyll
 <!DOCTYPE html>
-<html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Economy Insight</title>
-    <style>
-        :root {
-            --primary-color: #1a1a1a;
-            --secondary-color: #2c2c2c;
-            --text-color: #e0e0e0;
-            --accent-color: #00aaff;
-            --border-color: #444;
-        }
 
-        body {
-            background-color: var(--primary-color);
-            color: var(--text-color);
-            font-family: 'Noto Sans KR', sans-serif;
-            margin: 0;
-            line-height: 1.6;
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>FashionStore - Product Listing</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings:
+            'FILL' 0,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 24
         }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* Header */
-        .site-header {
-            background-color: var(--primary-color);
-            border-bottom: 1px solid var(--border-color);
-            padding: 20px 0;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        .site-header .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .site-title {
-            font-size: 2rem;
-            font-weight: bold;
-            color: var(--accent-color);
-            text-decoration: none;
-        }
-
-        .main-nav ul {
-            margin: 0;
-            padding: 0;
-            list-style: none;
-        }
-
-        .main-nav li {
-            display: inline-block;
-            margin-left: 25px;
-        }
-
-        .main-nav a {
-            text-decoration: none;
-            color: var(--text-color);
-            font-size: 1.1rem;
-            transition: color 0.3s ease;
-        }
-
-        .main-nav a:hover {
-            color: var(--accent-color);
-        }
-
-        /* Main Content */
-        .main-content {
-            padding: 40px 0;
-        }
-
-        .section-title {
-            font-size: 2.5rem;
-            margin-bottom: 30px;
-            text-align: center;
-            border-bottom: 2px solid var(--accent-color);
-            padding-bottom: 10px;
-            display: inline-block;
-        }
-        
-        .center-title {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-
-        .news-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-
-        .news-card {
-            background-color: var(--secondary-color);
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            overflow: hidden;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .news-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-        }
-
-        .news-card-image {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-        }
-
-        .news-card-content {
-            padding: 20px;
-        }
-
-        .news-card-category {
-            font-size: 0.9rem;
-            color: var(--accent-color);
-            margin-bottom: 10px;
-            font-weight: bold;
-        }
-
-        .news-card-title {
-            font-size: 1.4rem;
-            margin: 0 0 15px 0;
-        }
-
-        .news-card-excerpt {
-            font-size: 1rem;
-            color: #b0b0b0;
-            margin-bottom: 15px;
-        }
-
-        .news-card-meta {
-            font-size: 0.8rem;
-            color: #888;
-        }
-
-        /* Footer */
-        .site-footer {
-            background-color: #111;
-            color: #888;
-            padding: 40px 0;
-            margin-top: 60px;
-            border-top: 1px solid var(--border-color);
-        }
-
-        .site-footer .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-        }
-
-        .footer-links a {
-            color: #888;
-            text-decoration: none;
-            margin-left: 20px;
-            transition: color 0.3s ease;
-        }
-
-        .footer-links a:hover {
-            color: var(--accent-color);
-        }
-
     </style>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#333333",
+                        "secondary": "#F5F5DC",
+                        "accent": "#B8868B",
+                        "background-light": "#F9F9F9",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
 </head>
-<body>
-
-    <header class="site-header">
-        <div class="container">
-            <a href="#" class="site-title">Economy Insight</a>
-            <nav class="main-nav">
-                <ul>
-                    <li><a href="#">국내 경제</a></li>
-                    <li><a href="#">세계 경제</a></li>
-                    <li><a href="#">증권</a></li>
-                    <li><a href="#">부동산</a></li>
-                    <li><a href="#">칼럼</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <main class="main-content">
-        <div class="container">
-            <div class="center-title">
-                <h1 class="section-title">최신 경제 뉴스</h1>
-            </div>
-            
-            <div class="news-grid">
-                <article class="news-card">
-                    <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?q=80&w=2070&auto=format&fit=crop" alt="경제 그래프 이미지" class="news-card-image">
-                    <div class="news-card-content">
-                        <p class="news-card-category">시장 분석</p>
-                        <h2 class="news-card-title">연준, 금리 동결 시사... 시장 반응은?</h2>
-                        <p class="news-card-excerpt">미국 연방준비제도(Fed)가 다가오는 회의에서 기준금리를 동결할 가능성이 높아지면서 글로벌 금융 시장의 이목이 집중되고 있습니다.</p>
-                        <p class="news-card-meta">2025년 10월 15일</p>
-                    </div>
-                </article>
-
-                <article class="news-card">
-                    <img src="https://images.unsplash.com/photo-1694662029912-87821a39d493?q=80&w=2070&auto=format&fit=crop" alt="기술 산업 이미지" class="news-card-image">
-                    <div class="news-card-content">
-                        <p class="news-card-category">산업 동향</p>
-                        <h2 class="news-card-title">AI 반도체 시장, 2026년까지 2배 성장 전망</h2>
-                        <p class="news-card-excerpt">인공지능 기술의 급격한 발전으로 인해 AI 반도체 수요가 폭발적으로 증가하고 있으며, 관련 기업들의 주가 또한 강세를 보이고 있습니다.</p>
-                        <p class="news-card-meta">2025년 10월 14일</p>
-                    </div>
-                </article>
-
-                <article class="news-card">
-                    <img src="https://images.unsplash.com/photo-1560518883-ce09059ee41f?q=80&w=1973&auto=format&fit=crop" alt="부동산 이미지" class="news-card-image">
-                    <div class="news-card-content">
-                        <p class="news-card-category">부동산</p>
-                        <h2 class="news-card-title">수도권 아파트값, 5주 연속 하락세 둔화</h2>
-                        <p class="news-card-excerpt">정부의 부동산 규제 완화 정책과 대출 금리 하향 안정화에 힘입어 수도권 아파트 가격의 하락폭이 점차 줄어들고 있는 것으로 나타났습니다.</p>
-                        <p class="news-card-meta">2025년 10월 13일</p>
-                    </div>
-                </article>
-
-                <article class="news-card">
-                    <img src="https://images.unsplash.com/photo-1600295309913-55595a857944?q=80&w=2070&auto=format&fit=crop" alt="글로벌 무역 이미지" class="news-card-image">
-                    <div class="news-card-content">
-                        <p class="news-card-category">세계 경제</p>
-                        <h2 class="news-card-title">중국, 3분기 GDP 성장률 예상치 상회</h2>
-                        <p class="news-card-excerpt">중국의 3분기 국내총생산(GDP)이 시장 예상치를 웃도는 성장률을 기록하며 경기 회복에 대한 기대감을 높이고 있습니다.</p>
-                        <p class="news-card-meta">2025년 10월 12일</p>
-                    </div>
-                </article>
-
-                <article class="news-card">
-                    <img src="https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?q=80&w=2070&auto=format&fit=crop" alt="주식 시장 이미지" class="news-card-image">
-                    <div class="news-card-content">
-                        <p class="news-card-category">증권</p>
-                        <h2 class="news-card-title">코스피, 기관 순매수에 힘입어 2400선 회복</h2>
-                        <p class="news-card-excerpt">외국인의 매도세에도 불구하고 기관 투자자들의 강력한 순매수세가 유입되면서 코스피 지수가 2400선을 회복하는 데 성공했습니다.</p>
-                        <p class="news-card-meta">2025년 10월 11일</p>
-                    </div>
-                </article>
-
-                <article class="news-card">
-                    <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=1932&auto=format&fit=crop" alt="스타트업 이미지" class="news-card-image">
-                    <div class="news-card-content">
-                        <p class="news-card-category">기업</p>
-                        <h2 class="news-card-title">국내 유니콘 기업, 역대 최다 기록 경신</h2>
-                        <p class="news-card-excerpt">올해 국내에서 기업 가치 1조 원 이상을 인정받은 비상장 스타트업, 즉 '유니콘 기업'의 수가 역대 최다를 기록하며 벤처 생태계의 성장을 증명했습니다.</p>
-                        <p class="news-card-meta">2025년 10월 10일</p>
-                    </div>
-                </article>
-            </div>
-        </div>
-    </main>
-
-    <footer class="site-footer">
-        <div class="container">
-            <p>&copy; 2025 Economy Insight. All Rights Reserved.</p>
-            <div class="footer-links">
-                <a href="#">회사소개</a>
-                <a href="#">이용약관</a>
-                <a href="#">개인정보처리방침</a>
-                <a href="#">문의하기</a>
-            </div>
-        </div>
-    </footer>
-
-</body>
-
-</html>
+<body class="bg-background-light dark:bg-background-dark font-display text-primary dark:text-white">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<header class="sticky top-0 z-10 bg-background-light dark:bg-background-dark border-b border-gray-200 dark:border-gray-700">
+<div class="px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between h-16">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary dark:text-white text-3xl">local_mall</span>
+<h2 class="text-primary dark:text-white text-xl font-bold">FashionStore</h2>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-primary dark:text-white text-sm font-medium" href="#">Women</a>
+<a class="text-primary dark:text-white text-sm font-medium" href="#">Men</a>
+<a class="text-primary dark:text-white text-sm font-medium" href="#">New Arrivals</a>
+<a class="text-primary dark:text-white text-sm font-medium" href="#">Sale</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<div class="relative hidden sm:block">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-gray-400">search</span>
+<input class="form-input w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-primary dark:text-white bg-gray-100 dark:bg-gray-800 focus:outline-0 focus:ring-2 focus:ring-accent border-transparent h-10 placeholder:text-gray-400 pl-10 pr-4 text-sm" placeholder="Search" type="search"/>
+</div>
+<button class="p-2 rounded-full text-primary dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800">
+<span class="material-symbols-outlined">person</span>
+</button>
+<button class="p-2 rounded-full text-primary dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800">
+<span class="material-symbols-outlined">shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+</header>
+<main class="flex-grow">
+<div class="px-4 sm:px-6 lg:px-8 py-8">
+<div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+<aside class="lg:col-span-1">
+<div class="space-y-6">
+<div>
+<h3 class="font-bold text-lg mb-4">Category</h3>
+<ul class="space-y-2">
+<li><a class="text-primary dark:text-white hover:text-accent" href="#">All</a></li>
+<li><a class="text-primary dark:text-white hover:text-accent" href="#">Dresses</a></li>
+<li><a class="text-primary dark:text-white hover:text-accent" href="#">Tops</a></li>
+<li><a class="text-primary dark:text-white hover:text-accent" href="#">Pants</a></li>
+<li><a class="text-primary dark:text-white hover:text-accent" href="#">Jackets</a></li>
+</ul>
+</div>
+<div>
+<h3 class="font-bold text-lg mb-4">Size</h3>
+<div class="grid grid-cols-4 gap-2">
+<button class="border border-gray-300 dark:border-gray-600 rounded-lg h-10 text-sm font-medium hover:bg-gray-100 dark:hover:bg-gray-800 focus:bg-accent focus:text-white">XS</button>
+<button class="border border-gray-300 dark:border-gray-600 rounded-lg h-10 text-sm font-medium hover:bg-gray-100 dark:hover:bg-gray-800 focus:bg-accent focus:text-white">S</button>
+<button class="border border-gray-300 dark:border-gray-600 rounded-lg h-10 text-sm font-medium hover:bg-gray-100 dark:hover:bg-gray-800 focus:bg-accent focus:text-white bg-accent text-white">M</button>
+<button class="border border-gray-300 dark:border-gray-600 rounded-lg h-10 text-sm font-medium hover:bg-gray-100 dark:hover:bg-gray-800 focus:bg-accent focus:text-white">L</button>
+<button class="border border-gray-300 dark:border-gray-600 rounded-lg h-10 text-sm font-medium hover:bg-gray-100 dark:hover:bg-gray-800 focus:bg-accent focus:text-white">XL</button>
+</div>
+</div>
+<div>
+<h3 class="font-bold text-lg mb-4">Color</h3>
+<div class="grid grid-cols-6 gap-2">
+<button class="w-8 h-8 rounded-full border border-gray-300" style="background-color: #000000;"></button>
+<button class="w-8 h-8 rounded-full border border-gray-300" style="background-color: #FFFFFF;"></button>
+<button class="w-8 h-8 rounded-full ring-2 ring-accent" style="background-color: #FFC0CB;"></button>
+<button class="w-8 h-8 rounded-full border border-gray-300" style="background-color: #ADD8E6;"></button>
+<button class="w-8 h-8 rounded-full border border-gray-300" style="background-color: #90EE90;"></button>
+<button class="w-8 h-8 rounded-full border border-gray-300" style="background-color: #FFFFE0;"></button>
+</div>
+</div>
+<div>
+<h3 class="font-bold text-lg mb-4">Price Range</h3>
+<div class="relative pt-1">
+<input class="w-full h-2 bg-gray-200 dark:bg-gray-700 rounded-lg appearance-none cursor-pointer" max="500" min="0" type="range"/>
+<div class="flex justify-between text-sm text-gray-500 dark:text-gray-400 mt-2">
+<span>$0</span>
+<span>$500</span>
+</div>
+</div>
+</div>
+</div>
+</aside>
+<div class="lg:col-span-3">
+<div class="flex flex-wrap gap-2 mb-4">
+<a class="text-gray-500 dark:text-gray-400 text-sm font-medium" href="#">Home</a>
+<span class="text-gray-500 dark:text-gray-400 text-sm font-medium">/</span>
+<a class="text-gray-500 dark:text-gray-400 text-sm font-medium" href="#">Women</a>
+<span class="text-gray-500 dark:text-gray-400 text-sm font-medium">/</span>
+<span class="text-primary dark:text-white text-sm font-medium">Dresses</span>
+</div>
+<div class="flex flex-wrap justify-between items-center gap-4 mb-6">
+<h1 class="text-primary dark:text-white text-4xl font-black tracking-[-0.033em]">Dresses</h1>
+<div class="relative">
+<select class="appearance-none h-10 pl-4 pr-10 rounded-lg bg-gray-100 dark:bg-gray-800 border-transparent focus:outline-none focus:ring-2 focus:ring-accent text-sm font-medium">
+<option>Sort by: Relevance</option>
+<option>Sort by: New Arrivals</option>
+<option>Sort by: Price: Low to High</option>
+<option>Sort by: Price: High to Low</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none">expand_more</span>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+<div class="flex flex-col gap-3 pb-3 group">
+<div class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-lg overflow-hidden relative">
+<div class="w-full h-full bg-center bg-no-repeat bg-cover transition-transform duration-300 group-hover:scale-105" data-alt="Floral Print Dress" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDkHo3x8_RrrO82VqVYLewOguKQw261XVFOYgE7sNxinQEN8EX62AJhapnQgIari6a_YOLQKjMzu0hvit_Heb80_YiCrwQ2CWRO4aGVT6maixJVeu3jm6Xe6DezHlFOXNIZHq7p0hvCvWPSHHvmWMeiDRnLkt3ANq9afrctakbvDXd8Yk9KK72_emjQrhWrqH369DcnK438J39chBR-5yOi-PLEFVXw10ApBJI4yMpRPcnSgApS3UTTfXquKdiB1X2-RjHCehr-RgnQ");'></div>
+</div>
+<div>
+<p class="text-primary dark:text-white text-base font-medium">Floral Print Dress</p>
+<p class="text-gray-500 dark:text-gray-400 text-sm">$49.99</p>
+</div>
+</div>
+<div class="flex flex-col gap-3 pb-3 group">
+<div class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-lg overflow-hidden relative">
+<div class="w-full h-full bg-center bg-no-repeat bg-cover transition-transform duration-300 group-hover:scale-105" data-alt="Striped Maxi Dress" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB1Z0S6J_J8h0mKsmLWdEzrMTKXA87_nLpDAB2nSAN7Q48-2J3LS2JRTx_R9BsSCh6SBO5K8zRtmfuMGbnIXE0kD0MkRqo5PyL-C3VcNeIpL_yyvtSJD5bcPqJyvqHOomIXYFA7tS_eSfVEyiET_V2TqXo2RS-EseWykkXV3fcKIn8azmvn9UOHOvCi2aKAna2MRMguKlJF_J2IehNjj74T_EETrxZDP046KC1dBXmYK8mmiOWhHCD068zFLbGrr94fonM-ay-BHlry");'></div>
+</div>
+<div>
+<p class="text-primary dark:text-white text-base font-medium">Striped Maxi Dress</p>
+<p class="text-gray-500 dark:text-gray-400 text-sm">$59.99</p>
+</div>
+</div>
+<div class="flex flex-col gap-3 pb-3 group">
+<div class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-lg overflow-hidden relative">
+<div class="w-full h-full bg-center bg-no-repeat bg-cover transition-transform duration-300 group-hover:scale-105" data-alt="Satin Slip Dress" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBvdQ9aLVetU7mUgi3cZoma6JD0UFAoFKMbRbO0fXQg-69opuzHjPMz1ZrweONsHCaTczSulGsn-d51muqL5LKj3FdiVRqRjUe3DcPulKQc-nsbrdUYTgNeUg91Ejn-ghVDwU917JWokeOMYJGXfLvZ-OLGm4omPU7Pg52-o3AVPtXmmeo_LBd7Abm-5FrsoGy-jaEcDE1byvM095dYUfPS0MDb9xJQsmE3-GkAbgIJmPjYNu9c2YpuS9zOLVdnY0v-y1hCgm0Kcgjh");'></div>
+</div>
+<div>
+<p class="text-primary dark:text-white text-base font-medium">Satin Slip Dress</p>
+<p class="text-gray-500 dark:text-gray-400 text-sm">$69.99</p>
+</div>
+</div>
+<div class="flex flex-col gap-3 pb-3 group">
+<div class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-lg overflow-hidden relative">
+<div class="w-full h-full bg-center bg-no-repeat bg-cover transition-transform duration-300 group-hover:scale-105" data-alt="Bohemian Rhapsody Dress" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDENqbHgqs5f-k18YBM2Bfj_JOlBRo-Bp7MsOS7eAje41-mylUKmfpK2olOcEHOZEPB9MTezpA9UIiEVaZ5Isw2LaOuwfwW91eofTfrWuqiryM8MdlgqSwS9nYsRLRt4rEOY2mgwZaCKMhWrqdYDYSBrR1B1E_Axw1S9XlGfDvoWFHkuiEsPqkZR1TmiqGqSUTh0xfYTiAb7l2AXF2U1Iq_O1afHP7jVCzOmoqv21aAo6MJs83PRoW1buiKpBxWbKT4crfb0L_399ZF");'></div>
+</div>
+<div>
+<p class="text-primary dark:text-white text-base font-medium">Bohemian Rhapsody Dress</p>
+<p class="text-gray-500 dark:text-gray-400 text-sm">$79.99</p>
+</div>
+</div>
+<div class="flex flex-col gap-3 pb-3 group">
+<div class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-lg overflow-hidden relative">
+<div class="w-full h-full bg-center bg-no-repeat bg-cover transition-transform duration-300 group-hover:scale-105" data-alt="Classic Little Black Dress" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBei3y6HQg5GmNXPUn8YeqUnv7AfQLuHmGjTfBbzL0FQ9lK8tap_QPFD4xFKwoQNtHpT1E3ICTNvuv059yG1tTTOIXlHZJzEAgqH9W1OmhQ-jlqUfJBsdPmnaAp1xgtZLFOmW0jEmZyKsBraNvA7ebIO85Lf0WqnqIcqqDkmzGJr4a1wiuWjqe-8X53Ez509iD047gLsDbwnfHarUwkM1zrz3DFVmUSSwQzOT7Y_er30s09Hre_d7B0AZ64e7Rw2pJoaYLS8P63e9og");'></div>
+</div>
+<div>
+<p class="text-primary dark:text-white text-base font-medium">Classic Little Black Dress</p>
+<p class="text-gray-500 dark:text-gray-400 text-sm">$89.99</p>
+</div>
+</div>
+<div class="flex flex-col gap-3 pb-3 group">
+<div class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-lg overflow-hidden relative">
+<div class="w-full h-full bg-center bg-no-repeat bg-cover transition-transform duration-300 group-hover:scale-105" data-alt="Ruffled Summer Dress" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBy4tsvnpSO662wCi4puG8cNQLtQMf3McpucfFfiYU3A2Wjpl-5KPGnFwNS9oNTKxOfnCzLdXpqAIgwsei76ecm-vpPosx58It0t96gt8qBIjnkMYekS-FQ5HCYTXjWsA1m9v7WXGm2kfQnckoxRWtlmjw1l8GHhyMeF3Uk6sDEaiHTlvyEWdrqR1utj54NsP504ym5wNNJSd7E3-pNKN4Dbei1FowAxAnN669aPSvYniUmg3YoIl5-x5j7OI78JzVekkoV37DNdMNz");'></div>
+</div>
+<div>
+<p class="text-primary dark:text-white text-base font-medium">Ruffled Summer Dress</p>
+<p class="text-gray-500 dark:text-gray-400 text-sm">$49.99</p>
+</div>
+</div>
+</div>
+<nav class="flex items-center justify-center mt-8">
+<ul class="flex items-center -space-x-px h-10 text-base">
+<li>
+<a class="flex items-center justify-center px-4 h-10 ms-0 leading-tight text-gray-500 bg-white border border-e-0 border-gray-300 rounded-s-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white" href="#">
+<span class="sr-only">Previous</span>
+<span class="material-symbols-outlined">chevron_left</span>
+</a>
+</li>
+<li>
+<a class="flex items-center justify-center px-4 h-10 leading-tight text-white bg-accent border border-gray-300 hover:bg-accent/90 dark:bg-accent dark:border-gray-700 dark:text-white" href="#">1</a>
+</li>
+<li>
+<a class="flex items-center justify-center px-4 h-10 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white" href="#">2</a>
+</li>
+<li>
+<a class="flex items-center justify-center px-4 h-10 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white" href="#">3</a>
+</li>
+<li>
+<a class="flex items-center justify-center px-4 h-10 leading-tight text-gray-500 bg-white border border-s-0 border-gray-300 rounded-e-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white" href="#">
+<span class="sr-only">Next</span>
+<span class="material-symbols-outlined">chevron_right</span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+</main>
+<footer class="bg-gray-100 dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700 mt-auto">
+<div class="px-4 sm:px-6 lg:px-8 py-8">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+<div>
+<h4 class="font-bold mb-4">About Us</h4>
+<ul class="space-y-2 text-sm text-gray-600 dark:text-gray-400">
+<li><a class="hover:text-primary" href="#">Our Story</a></li>
+<li><a class="hover:text-primary" href="#">Careers</a></li>
+<li><a class="hover:text-primary" href="#">Press</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold mb-4">Customer Service</h4>
+<ul class="space-y-2 text-sm text-gray-600 dark:text-gray-400">
+<li><a class="hover:text-primary" href="#">Contact Us</a></li>
+<li><a class="hover:text-primary" href="#">Shipping &amp; Returns</a></li>
+<li><a class="hover:text-primary" href="#">FAQ</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold mb-4">Follow Us</h4>
+<div class="flex space-x-4">
+<a class="text-gray-500 hover:text-primary dark:text-gray-400 dark:hover:text-white" href="#"><svg aria-hidden="true" class="h-6 w-6" fill="currentColor" viewbox="0 0 24 24"><path clip-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" fill-rule="evenodd"></path></svg></a>
+<a class="text-gray-500 hover:text-primary dark:text-gray-400 dark:hover:text-white" href="#"><svg aria-hidden="true" class="h-6 w-6" fill="currentColor" viewbox="0 0 24 24"><path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.71v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path></svg></a>
+<a class="text-gray-500 hover:text-primary dark:text-gray-400 dark:hover:text-white" href="#"><svg aria-hidden="true" class="h-6 w-6" fill="currentColor" viewbox="0 0 24 24"><path clip-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.024.06 1.378.06 3.808s-.012 2.784-.06 3.808c-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.024.048-1.378.06-3.808.06s-2.784-.012-3.808-.06c-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.048-1.024-.06-1.378-.06-3.808s.012-2.784.06-3.808c.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 016.345 2.525c.636-.247 1.363-.416 2.427-.465C9.793 2.013 10.147 2 12.315 2zM12 7.026a4.974 4.974 0 100 9.948 4.974 4.974 0 000-9.948zm0 8.094a3.12 3.12 0 110-6.24 3.12 3.12 0 010 6.24zM16.88 7.026a1.24 1.24 0 100-2.48 1.24 1.24 0 000 2.48z" fill-rule="evenodd"></path></svg></a>
+</div>
+</div>
+<div class="md:col-span-4 lg:col-span-1">
+<h4 class="font-bold mb-4">Newsletter</h4>
+<p class="text-sm text-gray-600 dark:text-gray-400 mb-4">Subscribe for the latest trends and offers.</p>
+<form class="flex">
+<input class="form-input flex-grow rounded-l-lg border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white" placeholder="Your email" type="email"/>
+<button class="bg-primary hover:bg-primary/90 text-white px-4 rounded-r-lg" type="submit">Subscribe</button>
+</form>
+</div>
+</div>
+<div class="mt-8 pt-8 border-t border-gray-200 dark:border-gray-700 text-center text-sm text-gray-500 dark:text-gray-400">
+<p>© 2024 FashionStore. All rights reserved.</p>
+</div>
+</div>
+</footer>
+</div>
+</body></html>
